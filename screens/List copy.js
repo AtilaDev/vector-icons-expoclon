@@ -31,20 +31,18 @@ function App({ navigation }) {
 
       <FlatList
         data={listIcons}
-        renderItem={({ item }) => {
-          return (
-            <ListItem
-              family={item.family}
-              name={item.name}
-              onPress={() =>
-                navigation.push('Details', {
-                  family: item.family,
-                  name: item.name,
-                })
-              }
-            />
-          );
-        }}
+        renderItem={({ item }) => (
+          <ListItem
+            family={item.family}
+            name={item.name}
+            onPress={() =>
+              navigation.push('Details', {
+                family: item.family,
+                name: item.name,
+              })
+            }
+          />
+        )}
         keyExtractor={(item) => item.name + item.value.toString()}
       />
     </View>

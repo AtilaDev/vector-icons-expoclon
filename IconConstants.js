@@ -12,18 +12,18 @@ export const IconFamilies = {
   MaterialCommunityIcons: require('./glyphmaps/MaterialCommunityIcons.json'),
   SimpleLineIcons: require('./glyphmaps/SimpleLineIcons.json'),
   Octicons: require('./glyphmaps/Octicons.json'),
-  Zocial: require('./glyphmaps/Zocial.json')
+  Zocial: require('./glyphmaps/Zocial.json'),
 };
 
 export const IconsArray = _.reduce(
   Object.keys(IconFamilies),
   (arr, family) => {
     let icons = IconFamilies[family];
-    Object.keys(icons).forEach(iconName => {
+    Object.keys(icons).forEach((iconName) => {
       arr.push({
         name: iconName,
         value: icons[iconName],
-        family
+        family,
       });
     });
     return arr;
