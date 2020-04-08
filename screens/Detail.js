@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Title, Button, Subheading, Caption } from 'react-native-paper';
 import Space from '../components/Space.js';
+import Icon from '../Icon';
 
 const Detail = ({ route, navigation }) => {
   const { family, name } = route.params;
@@ -9,6 +10,15 @@ const Detail = ({ route, navigation }) => {
   return (
     <View style={styles.container}>
       <Title>Name: {name}</Title>
+      <View
+        style={{
+          flexDirection: 'row',
+        }}>
+        <Title>Icon:</Title>
+        <View style={{ marginLeft: 10 }}>
+          <Icon family={family} name={name} />
+        </View>
+      </View>
       <Space>
         <Subheading>Import:</Subheading>
         <Caption>{`import { ${family} } from '@expo/vector-icons';`}</Caption>

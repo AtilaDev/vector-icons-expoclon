@@ -20,7 +20,7 @@ function App({ navigation }) {
   };
 
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <Searchbar
         placeholder="Search for an icon"
         onChangeText={(query) => setQuery(query)}
