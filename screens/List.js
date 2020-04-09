@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { View, FlatList } from 'react-native';
-// import FlatList from 'react-native-web-lists';
+import React, { useState } from 'react';
+import { StyleSheet, View, FlatList, Platform } from 'react-native';
 import { Searchbar } from 'react-native-paper';
 import _ from 'lodash';
 import { IconsArray } from '../IconConstants';
@@ -20,7 +19,7 @@ function App({ navigation }) {
   };
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={styles.container}>
       <Searchbar
         placeholder="Search for an icon"
         onChangeText={(query) => setQuery(query)}
@@ -50,5 +49,11 @@ function App({ navigation }) {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
 
 export default App;

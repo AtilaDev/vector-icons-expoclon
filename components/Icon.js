@@ -17,6 +17,8 @@ import {
 export default class Icon extends Component {
   render() {
     this.name = this.props.name;
+    this.size = this.props.size;
+    this.color = this.props.color;
 
     switch (this.props.family) {
       case 'AntDesign':
@@ -71,6 +73,12 @@ export default class Icon extends Component {
         this.Icon = Ionicons;
     }
 
-    return <this.Icon name={this.name} size={30} color="black" />;
+    return (
+      <this.Icon
+        name={this.name}
+        size={this.size}
+        color={this.color || '#000'}
+      />
+    );
   }
 }

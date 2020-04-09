@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <View style={styles.header}>
       <Appbar.Header>
-        <Appbar.Content title="@expo/vector-icons directory" />
+        <Appbar.Content title="@expo/vector-icons directory | Clon" />
       </Appbar.Header>
     </View>
   );
@@ -17,8 +17,8 @@ const styles = {
     position: 'absolute',
     top: 0,
     left: 0,
-    width: '100%'
-  }
+    width: '100%',
+  },
 };
 
 export default Header;

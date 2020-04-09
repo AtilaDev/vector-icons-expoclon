@@ -1,12 +1,12 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
-import Icon from '../Icon';
+import Icon from './Icon';
 
 const ListItem = ({ name, family, onPress }) => {
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.container}>
-        <Icon family={family} name={name} />
+        <Icon family={family} name={name} size={30} />
         <View style={styles.textView}>
           <Text style={styles.name}>{name}</Text>
           <Text style={styles.family}>{family}</Text>
