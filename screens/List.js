@@ -4,8 +4,9 @@ import { Searchbar } from 'react-native-paper';
 import _ from 'lodash';
 import { IconsArray } from '../IconConstants';
 import ListItem from '../components/ListItem';
+import { v1 as uuidv1 } from 'uuid';
 
-function App({ navigation }) {
+const List = ({ navigation }) => {
   const [query, setQuery] = useState('');
   const [listIcons, setListIcons] = useState([]);
 
@@ -44,11 +45,11 @@ function App({ navigation }) {
             />
           );
         }}
-        keyExtractor={(item) => item.name + item.value.toString()}
+        keyExtractor={(item) => item.name + item.value.toString() + uuidv1()}
       />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -56,4 +57,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default List;

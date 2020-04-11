@@ -5,6 +5,7 @@ import {
   EvilIcons,
   Feather,
   FontAwesome,
+  FontAwesome5,
   Foundation,
   Ionicons,
   MaterialIcons,
@@ -39,6 +40,10 @@ export default class Icon extends Component {
 
       case 'FontAwesome':
         this.Icon = FontAwesome;
+        break;
+
+      case 'FontAwesome5':
+        this.Icon = FontAwesome5;
         break;
 
       case 'Foundation':

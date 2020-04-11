@@ -3,7 +3,7 @@ import 'react-native-gesture-handler';
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { StatusBar, Platform, View, StyleSheet } from 'react-native';
+import { StatusBar, View, StyleSheet } from 'react-native';
 import { Provider as PaperProvider, DefaultTheme } from 'react-native-paper';
 import List from './screens/List';
 import Detail from './screens/Detail';
@@ -35,7 +35,7 @@ export default function App() {
           <Stack.Navigator mode="modal" headerMode="float">
             <Stack.Screen
               options={{ headerShown: false }}
-              name="@expo/vector-icons directory | clone"
+              name="@expo/vector-icons | PWA clone"
               component={List}
               options={{
                 headerStyle: {
