@@ -1,4 +1,4 @@
-# vector-icons - expo clon
+# @expo/vector-icons | PWA clone
 
 ```
 $ npm install or yarn 
