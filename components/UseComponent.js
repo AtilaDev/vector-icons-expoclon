@@ -5,8 +5,8 @@ const UseComponent = ({ family, name }) => {
   return (
     <Text style={styles.instructions}>{`    <${family}
         name="${name}"
-        size={32}
-        color="green"
+        size={24}
+        color="black"
     />`}</Text>
   );
 };

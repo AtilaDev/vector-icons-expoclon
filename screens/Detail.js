@@ -1,5 +1,12 @@
 import React from 'react';
-import { StyleSheet, View, Text, Platform } from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Text,
+  Platform,
+  TouchableOpacity,
+  Clipboard,
+} from 'react-native';
 import { Button } from 'react-native-paper';
 import Space from '../components/Space.js';
 import Icon from '../components/Icon';
@@ -8,6 +15,14 @@ import UseComponent from '../components/UseComponent';
 
 const Detail = ({ route, navigation }) => {
   const { family, name } = route.params;
+
+  const handleCopyImport = () => {
+    Clipboard.setString(`import { ${family} } from '@expo/vector-icons';`);
+  };
+
+  const handleCopyUse = () => {
+    Clipboard.setString(`<${family} name="${name}" size={24} color="black" />`);
+  };
 
   return (
     <View style={styles.container}>
@@ -26,12 +41,24 @@ const Detail = ({ route, navigation }) => {
         </Space>
 
         <Space>
-          <Text style={styles.title}>Import:</Text>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <Text style={styles.title}>Import:</Text>
+            <TouchableOpacity onPress={handleCopyImport}>
+              <Text style={styles.copy}>copy</Text>
+            </TouchableOpacity>
+          </View>
+
           <FamilyImport family={family} />
         </Space>
 
         <Space>
-          <Text style={styles.title}>Use:</Text>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <Text style={styles.title}>Use:</Text>
+            <TouchableOpacity onPress={handleCopyUse}>
+              <Text style={styles.copy}>copy</Text>
+            </TouchableOpacity>
+          </View>
+
           <UseComponent family={family} name={name} />
         </Space>
 
@@ -62,6 +89,17 @@ const styles = StyleSheet.create({
   },
   textName: {
     color: '#33691E',
+  },
+  copy: {
+    marginLeft: 10,
+    fontWeight: '400',
+    fontSize: 14,
+    color: '#7B1FA2',
+    paddingHorizontal: 6,
+    paddingVertical: 1,
+    borderWidth: 1,
+    borderRadius: 3,
+    borderColor: '#7B1FA2',
   },
 });
 
