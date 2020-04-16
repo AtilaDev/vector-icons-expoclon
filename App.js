@@ -18,7 +18,7 @@ export default function App() {
             name="List"
             component={List}
             options={{
-              title: '@expo/vector-icons | AtilaDev PWA (advanced clone)',
+              title: '@expo/vector-icons | AtilaDev (adv clone)',
               headerStyle: {
                 backgroundColor: '#7B1FA2',
               },
