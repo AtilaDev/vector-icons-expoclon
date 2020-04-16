@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "Expo Web | Vector Icons PWA clone",
-    "slug": "expo-web-vector-icons",
+    "name": "@expo/vector-icons | AtilaDev PWA (advanced clone)",
+    "slug": "expo-web-vector-icons-atiladev-pwa-ac",
     "privacy": "public",
-    "platforms": ["ios", "android", "web"],
+    "platforms": ["web"],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
