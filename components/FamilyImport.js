@@ -4,7 +4,7 @@ import { Platform, StyleSheet, Text } from 'react-native';
 const FamilyImport = ({ family }) => {
   return (
     <Text style={styles.instructions} selectable>
-      {`import { ${family} } from '@expo/vector-icons';`}{' '}
+      {`import { ${family} } from '@expo/vector-icons';`}
     </Text>
   );
 };

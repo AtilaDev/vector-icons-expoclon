@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "@expo/vector-icons | AtilaDev PWA (advanced clone)",
-    "slug": "expo-web-vector-icons-atiladev-pwa-ac",
+    "name": "@expo/vector-icons | AtilaDev (adv clone)",
+    "slug": "expo-web-vector-icons-atiladev-adv-ac",
     "privacy": "public",
     "platforms": ["web"],
     "version": "1.0.0",
