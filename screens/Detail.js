@@ -54,7 +54,8 @@ const Detail = ({ route, navigation }) => {
                 styles.copyView,
                 {
                   backgroundColor: copyColorImp
-                    ? 'rgba(206, 147, 216,0.2)'
+                    ? // ? 'rgba(206, 147, 216,0.2)'
+                      '#CCCCCC'
                     : null,
                 },
               ]}>
@@ -73,7 +74,8 @@ const Detail = ({ route, navigation }) => {
                 styles.copyView,
                 {
                   backgroundColor: copyColorRen
-                    ? 'rgba(206, 147, 216,0.2)'
+                    ? // ? 'rgba(206, 147, 216,0.2)'
+                      '#CCCCCC'
                     : null,
                 },
               ]}>
@@ -97,8 +99,9 @@ const styles = StyleSheet.create({
     marginTop: 50,
     borderWidth: 1,
     borderRadius: 10,
-    borderColor: '#7B1FA2',
-    backgroundColor: 'rgba(243, 229, 245,0.5)',
+    borderColor: '#000',
+    backgroundColor: '#fafafa',
+    // backgroundColor: 'rgba(243, 229, 245,0.5)',
   },
   title: {
     fontSize: 24,
@@ -110,7 +113,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderWidth: 1,
     borderRadius: 3,
-    borderColor: '#7B1FA2',
+    borderColor: '#000',
     fontWeight: '600',
   },
   iconName: {
